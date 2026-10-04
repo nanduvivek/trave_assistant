@@ -54,7 +54,35 @@ def _inject_css():
 html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 
 /* ── App background ── */
-.stApp { background: #F0F4F8; }
+.stApp { background: #F0F4F8; color: #0F2340; }
+
+/* ── Main application text ── */
+.stApp {
+    background: #F0F4F8;
+    color: #0F2340 !important;
+}
+
+section[data-testid="stMain"] {
+    color: #0F2340 !important;
+}
+
+/* Streamlit markdown text */
+section[data-testid="stMain"] .stMarkdown,
+section[data-testid="stMain"] .stMarkdown p,
+section[data-testid="stMain"] .stMarkdown li,
+section[data-testid="stMain"] .stMarkdown span {
+    color: #0F2340;
+}
+
+/* Headings */
+section[data-testid="stMain"] h1,
+section[data-testid="stMain"] h2,
+section[data-testid="stMain"] h3,
+section[data-testid="stMain"] h4,
+section[data-testid="stMain"] h5,
+section[data-testid="stMain"] h6 {
+    color: #0F2340 !important;
+}
 
 /* ── Sidebar ── */
 [data-testid="stSidebar"] {
